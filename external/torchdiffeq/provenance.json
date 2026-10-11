@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/rtqichen/torchdiffeq",
+  "commit": "657943acefa826ef04c025ebeb1ff5e9d60dc268",
+  "license": "MIT",
+  "files": {
+    "examples/ode_demo.py": {
+      "sha256": "36cc0ebfcf56afb7a291142c03a19b8f0bd3d437f914f3f98657e048aa8a60e4",
+      "url": "https://github.com/rtqichen/torchdiffeq/blob/657943acefa826ef04c025ebeb1ff5e9d60dc268/examples/ode_demo.py"
+    },
+    "LICENSE": {
+      "sha256": "df970ff07a0460f29115f2feddcceb8253f5840a8b35df857884354e3d47753c",
+      "url": "https://github.com/rtqichen/torchdiffeq/blob/657943acefa826ef04c025ebeb1ff5e9d60dc268/LICENSE"
+    }
+  },
+  "reference_package_version": "0.2.5",
+  "extraction": {
+    "class": "ODEFunc",
+    "source_lines": [
+      111,
+      128
+    ],
+    "class_sha256": "2a123124e80f199ce34cee4f66e26d7cbf8683b2450ca2bb4f4b8a2ac9890c2d",
+    "objective_expression": "torch.mean(torch.abs(pred_y - batch_y))",
+    "objective_source_line": 167
+  }
+}
