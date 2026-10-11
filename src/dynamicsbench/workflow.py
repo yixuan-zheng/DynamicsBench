@@ -23,6 +23,7 @@ class Workload:
     tolerances: Tolerances = field(default_factory=Tolerances)
     source_files: list = field(default_factory=list)
     metadata: dict = field(default_factory=dict)
+    source_root: object = None
 
 def load_workload(path, *, device='cpu', factory='build_workload'):
     """Load trusted Python code; factory(device=...) must return Workload."""
@@ -37,6 +38,8 @@ def load_workload(path, *, device='cpu', factory='build_workload'):
     workload=build(device=device)
     if not isinstance(workload,Workload):raise ValueError('Factory must return dynamicsbench.Workload')
     workload.source_files=list(dict.fromkeys([path,*map(Path,workload.source_files)]))
+    if workload.source_root is None:
+        workload.source_root=next((parent for parent in path.parents if (parent/'pyproject.toml').is_file()),path.parent)
     return workload
 
 def _device(device):
@@ -52,7 +55,23 @@ def _device(device):
             raise ValueError(f'CUDA preflight failed for {torch.cuda.get_device_name(d)} with PyTorch {torch.__version__}: {exc}. Use a compatible PyTorch build/GPU profile or CPU.') from exc
     return d
 
-def run_workload(workload, output, *, repeats=7):
+def source_record(path, root, mode='relative'):
+    """Raw hashes identify bytes; canonical text hashes normalize CRLF only."""
+    p=Path(path).resolve();data=p.read_bytes()
+    raw=hashlib.sha256(data).hexdigest()
+    text=p.suffix.lower() in ('.py','.md','.json','.toml','.txt','.csv') or p.name in ('.gitattributes','.gitignore','LICENSE')
+    if text:
+        try:data.decode('utf-8')
+        except UnicodeDecodeError:text=False
+    canonical=data.replace(b'\r\n',b'\n') if text else data
+    if mode=='absolute':label=str(p)
+    else:
+        try:label=p.relative_to(Path(root).resolve()).as_posix()
+        except ValueError:label='external/source-'+raw[:16]
+    return {'path':label,'sha256':raw,'canonical_sha256':hashlib.sha256(canonical).hexdigest(),
+        'canonicalization':'utf8-crlf-to-lf' if text else 'raw-bytes'}
+
+def run_workload(workload, output, *, repeats=7, source_paths='relative'):
     """Write a fresh artifact directory. Nonempty output is never overwritten."""
     if not isinstance(workload,Workload):raise ValueError('Expected Workload')
     output=Path(output)
@@ -61,11 +80,13 @@ def run_workload(workload, output, *, repeats=7):
     for callback in (workload.dynamics,workload.objective,workload.reference):
         if not callable(callback):raise ValueError('Dynamics, objective and reference must be callable')
     for case in [*workload.selection_cases,*workload.heldout_cases]:_device(case._initial.device)
+    if source_paths not in ('relative','absolute'):raise ValueError('source_paths must be relative or absolute')
+    root=workload.source_root or Path.cwd()
     sources=[]
     for source in workload.source_files:
         p=Path(source).resolve()
         if not p.is_file():raise ValueError(f'Source file missing: {p}')
-        sources.append({'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+        sources.append(source_record(p,root,source_paths))
     dependencies={d.metadata['Name']:d.version for d in importlib.metadata.distributions() if d.metadata['Name']}
     # Check JSON metadata before running expensive evaluation.
     json.dumps(workload.metadata,allow_nan=False)
@@ -81,7 +102,7 @@ def run_workload(workload, output, *, repeats=7):
     ranking=[{'rank':i+1,'configuration':row['configuration'],'timing_ms':row['timing_ms']} for i,row in enumerate(passing)]
     status='no_recommendation' if not report['selected_configuration'] else ('heldout_failed' if report['heldout_passed'] is False else 'selected')
     report['product']={'version':importlib.metadata.version('dynamicsbench'),'status':status,'eligible_ranking':ranking,
-        'source_files':sources,'metadata':workload.metadata,'workflow_elapsed_ms':elapsed,
+        'source_files':sources,'source_path_mode':source_paths,'metadata':workload.metadata,'workflow_elapsed_ms':elapsed,
         'workflow_timing_scope':'Evaluation including reference, checks, warmups and candidate timing; excludes factory setup and export',
         'source_capture_scope':'Only explicitly supplied files plus loader file; imports, closures, datasets and reference validity are not automatically certified.'}
     recommendation={'schema_version':1,'status':status,'configuration':report['selected_configuration'],
@@ -89,10 +110,10 @@ def run_workload(workload, output, *, repeats=7):
         'workload_id':workload.workload_id,'reference_id':workload.reference_id,
         'cases':report['manifest']['cases'],'tolerances':asdict(workload.tolerances),
         'environment':{k:v for k,v in report['manifest'].items() if k not in ('cases',)},
-        'source_files':sources,'timing_overlap_candidates':report['timing_overlap_candidates'],
+        'source_files':sources,'source_path_mode':source_paths,'timing_overlap_candidates':report['timing_overlap_candidates'],
         'scope':report['scope'],'report_file':'report.json'}
     output.mkdir(parents=True,exist_ok=True)
-    for name,data in [('report.json',report),('recommendation.json',recommendation),('provenance.json',{'source_files':sources,'dependencies':dependencies,'metadata':workload.metadata})]:
+    for name,data in [('report.json',report),('recommendation.json',recommendation),('provenance.json',{'source_files':sources,'source_path_mode':source_paths,'dependencies':dependencies,'metadata':workload.metadata})]:
         (output/name).write_text(json.dumps(data,indent=2,allow_nan=False)+'\n')
     (output/'environment-lock.txt').write_text(''.join(f'{k}=={v}\n' for k,v in sorted(dependencies.items(),key=lambda x:x[0].lower())))
     with (output/'rankings.csv').open('w',newline='') as f:

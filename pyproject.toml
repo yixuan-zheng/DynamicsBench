@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dynamicsbench"
-version = "0.1.0rc1"
+version = "0.1.0rc2"
 description = "Validation and execution evidence for differentiable dynamical models"
 requires-python = ">=3.11"
 dependencies = ["torch>=2.2", "numpy>=1.26"]

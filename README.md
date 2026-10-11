@@ -2,7 +2,7 @@
 
 Validate deterministic PyTorch simulation states and parameter gradients, rank eligible Euler/RK4 configurations by measured execution cost, and export a scoped recommendation.
 
-**Start with [TESTING.md](TESTING.md).** This is the frozen 0.1.0rc1 P3 candidate. External human usability is pending. [CANDIDATE.json](CANDIDATE.json) records exact file hashes; the Git tag identifies the full tester packet.
+**Start with [TESTING.md](TESTING.md).** This is the frozen 0.1.0rc2 P3 candidate. External human usability is pending. [CANDIDATE.json](CANDIDATE.json) records exact file hashes; the Git tag identifies the full tester packet.
 
 Python >=3.11 is required. CPU is the default test environment; NVIDIA hardware and PACE access are not required. Source, an installable wheel, a minimal analytical example and an independent MIT-licensed neural-ODE example are included.
 
