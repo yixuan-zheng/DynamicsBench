@@ -1,0 +1,24 @@
+{
+  "protocol_version": 2,
+  "frozen_at_utc": "2026-10-11 05:34:39 UTC",
+  "evaluation_seeds": [
+    11,
+    12,
+    13
+  ],
+  "alphas": [
+    1,
+    16
+  ],
+  "before_reserved_seed_execution": true,
+  "files": {
+    "examples/policy_evaluation.py": "2fce5a85f6d9530b8725854a8a63d774bff276fa153a26ec9113792382fafd6f",
+    "examples/development_pilot.py": "0c82a159ceb04f9e265d97df5833131ff2438f7bb56b6133a62c409b0bf319cc",
+    "src/dynamicsbench/core.py": "bc650fce6e64787df730ea519708ea2684b81aa3634c32ca45c55764438ac156",
+    "src/dynamicsbench/__init__.py": "d3c05a3015aadc3d016217a1d860c1146003db4ceb45167eb8ee3934d7b62eb2",
+    "research/FINAL_PROTOCOL.md": "134d4197e775b46e93ba8c6a79218542cb609b32b375152b01b207e898fffa35",
+    "scripts/pace_policy_evaluation.sbatch": "1b5e03c3efc6d0643eea0b99eeacf32378a60904c8ee8920546f60f66303c4de",
+    "tests/test_evaluation_freeze.py": "ea37ea22cefd8e5bb5092d99e6dc52948110141889db14445aec3573b8d2faa1",
+    "tests/test_policy_pairing.py": "84ffb52c9e6377af8a433a540822f682927d067d4789725fa7dfcbf2c64c3843"
+  }
+}

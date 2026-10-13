@@ -1,0 +1,116 @@
+{
+  "paired_cases": 6,
+  "strategy_runs": 18,
+  "aggregates": {
+    "alpha1/fixed": {
+      "cases": 3,
+      "useful_quality_cost_count": 0,
+      "late_pass_count": 3,
+      "reference_pass_count": 3,
+      "fallback_count": 0,
+      "early_pass_late_failure_count": 0,
+      "cost_ratios": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mse_ratios": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "alpha1/initial_only": {
+      "cases": 3,
+      "useful_quality_cost_count": 3,
+      "late_pass_count": 3,
+      "reference_pass_count": 3,
+      "fallback_count": 0,
+      "early_pass_late_failure_count": 0,
+      "cost_ratios": [
+        0.7882973815836403,
+        0.8165007092508738,
+        0.7798807110307286
+      ],
+      "mse_ratios": [
+        0.9997830063890769,
+        0.9999087442420718,
+        1.0003342637614663
+      ]
+    },
+    "alpha1/initial_plus_early": {
+      "cases": 3,
+      "useful_quality_cost_count": 0,
+      "late_pass_count": 3,
+      "reference_pass_count": 3,
+      "fallback_count": 0,
+      "early_pass_late_failure_count": 0,
+      "cost_ratios": [
+        1.0867353421100479,
+        1.1006409069182002,
+        1.0754098660680818
+      ],
+      "mse_ratios": [
+        0.9989974714918924,
+        0.999881912920377,
+        1.0002617424000115
+      ]
+    },
+    "alpha16/fixed": {
+      "cases": 3,
+      "useful_quality_cost_count": 0,
+      "late_pass_count": 0,
+      "reference_pass_count": 3,
+      "fallback_count": 0,
+      "early_pass_late_failure_count": 0,
+      "cost_ratios": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mse_ratios": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "alpha16/initial_only": {
+      "cases": 3,
+      "useful_quality_cost_count": 0,
+      "late_pass_count": 3,
+      "reference_pass_count": 3,
+      "fallback_count": 0,
+      "early_pass_late_failure_count": 0,
+      "cost_ratios": [
+        2.197383546358262,
+        2.1613809455698183,
+        2.141596154318147
+      ],
+      "mse_ratios": [
+        1.0183010524203664,
+        1.011306308543865,
+        1.0160900927626293
+      ]
+    },
+    "alpha16/initial_plus_early": {
+      "cases": 3,
+      "useful_quality_cost_count": 0,
+      "late_pass_count": 3,
+      "reference_pass_count": 3,
+      "fallback_count": 0,
+      "early_pass_late_failure_count": 0,
+      "cost_ratios": [
+        2.3121065869093753,
+        2.280962321152345,
+        2.264925553981995
+      ],
+      "mse_ratios": [
+        1.0219259520907735,
+        1.0083140620002304,
+        1.0146850187581298
+      ]
+    }
+  },
+  "actual_case_execution_seconds": 2548.2428139369003,
+  "note": "Three paired seeds per regime; descriptive ratios/counts only. Summed case wall times are not CPU/GPU utilization or whole-study wall time."
+}

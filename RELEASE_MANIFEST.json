@@ -1,0 +1,483 @@
+{
+  "version": "0.1.0",
+  "files": {
+    ".gitattributes": "5834cac5cc679d64e77e96231df8d788695ede0d0a3775c662ccc1a2046ab2ce",
+    ".github/workflows/test.yml": "1f62561ca6c3544802dd26ca89b3db077759f9ac170f136fe826d9f2de2f5df9",
+    ".gitignore": "d6a392ea95e4cc8013c565b6ea7421f1fb2639f5ceb4b2e03fa1af9af9e6dc3b",
+    "CONTRIBUTING.md": "91a2859eb81621ae2eaf2f5c3a99c682b570eb1e69235e740a5edf65ddfcef6c",
+    "EVIDENCE.md": "2c974058cb94c85b1e5b0e9fd3a9b923250c0dac29e525a876923d432963feea",
+    "EVIDENCE_INDEX.md": "4d974cdfd83d5dc9dff2ede549fbfd2a78332fc80bbb7bc6c72ee73311c67466",
+    "LICENSE": "d787b96738b8ba026952afb54dcf9045f7097271efe8b275ffa873fe69d146d6",
+    "QUICKSTART.md": "85b4706d13e851bdd4efcc89f800f4378af2c6b41ef199dd0d36ad08ea0bcca8",
+    "README.md": "d2db880c49732da48603b7e19b43e19f4170d0ee4c5dce6b926bab4f32571693",
+    "RELEASE_NOTES.md": "9d2110560de3429e95e9f472765f06b0278a3dce19443c0d9a84f2efedacd30c",
+    "REPRODUCING.md": "b0c441ced537fcdfde9869218445b21662d431695a36d0fc3ad387436ca481f2",
+    "TECHNICAL_REPORT.md": "590d578ebeecc751b98c5863bb6489565b64f4ee89389056e23473ce7811183e",
+    "THIRD_PARTY_NOTICES.md": "ebb812abfeac1fcce933410821aad138ccf0acc43be2a932deed25024adfa4a5",
+    "dist/dynamicsbench-0.1.0-py3-none-any.whl": "a379b55df9143cc7cbdcb31ba6e798a118b33ce6c6466fcbf09f840b4a44f6ec",
+    "docs/COMPATIBILITY.md": "7752a105454232b01efd9e06c20c68b06bf53d7ac151fb552dfc9a617e36aa2e",
+    "docs/PRODUCT_GUIDE.md": "f4e5898c616240bb8cdbeabf3772f7fad2b06988df1827493f313b2303822571",
+    "docs/RELEASE_VERIFICATION.md": "760d7acc51603e18cb94b8e4ad74fd23ee290060fab82861eb61328a5e72e3cb",
+    "evidence/USABILITY_RECORD.md": "120e60f4b81296b640c9f6b539fbca055af98f66a9ee580c902e70c78a32bac3",
+    "evidence/compiled/compiled-reports.json": "83767944cef57e77198540ffe8e46945e6a119b74659aecfc60673d782655c44",
+    "evidence/compiled/environment-lock.txt": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8",
+    "evidence/compiled/tests.log": "03cb57e1a23adcb5aec5866bc2a791eaab4238502b21f74c57f44c445e22fb31",
+    "evidence/frozen-evaluation/alpha1-seed11/PRE_RUN.json": "7ddb03d0b5c4a19326343793c9648a6f4cf6d70991f978927fb64f31d608a1ec",
+    "evidence/frozen-evaluation/alpha1-seed11/environment-lock.txt": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8",
+    "evidence/frozen-evaluation/alpha1-seed11/fixed.pt": "704674bdbb873bf694b6b718c9acc789560a40b57ad2d4e5d6a9a7f06d1da7d6",
+    "evidence/frozen-evaluation/alpha1-seed11/initial_only.pt": "7228c066d0585f44c4f5fd283c34da050e24ad569a3e037f81573267c8cd2ee8",
+    "evidence/frozen-evaluation/alpha1-seed11/initial_plus_early.pt": "cb76f9d6e68981e2a2f3ad9b2f2a1c1220e7006b5a084443ae3b5d32d4efbd0c",
+    "evidence/frozen-evaluation/alpha1-seed11/manifest.json": "335ae89d6071eb8b83a29637ce9ae56954e6ad3e0b637731b82f99ebbd2ca81a",
+    "evidence/frozen-evaluation/alpha1-seed11/policies.json": "27ecff9951610dcad667f3901f4b2c3d460ff37ec9edcbc79dd857d5ea173dbf",
+    "evidence/frozen-evaluation/alpha1-seed12/PRE_RUN.json": "ce1b3130be4dbdd6c64f959dbbc2545becf7af050965793da49f348e88cd6fce",
+    "evidence/frozen-evaluation/alpha1-seed12/environment-lock.txt": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8",
+    "evidence/frozen-evaluation/alpha1-seed12/fixed.pt": "4e55c231f75a395996ec220d87e22239743d1b4cca910511e925d9f1ee2841a1",
+    "evidence/frozen-evaluation/alpha1-seed12/initial_only.pt": "6607a9de7bbf3f3387b83e40a2d7bfeb0b7079dfc99c4f3c1af16bfc5e1b0974",
+    "evidence/frozen-evaluation/alpha1-seed12/initial_plus_early.pt": "d9979f740702016209d4c3ff1e17e298f6194519c11f77335ba549789f1935ed",
+    "evidence/frozen-evaluation/alpha1-seed12/manifest.json": "92e016436940d60c72e34e0914da7edcd4f434770eab5e5c8707a84def58d609",
+    "evidence/frozen-evaluation/alpha1-seed12/policies.json": "17cefa8ac8bd2614a207cd4088d1a56d29a686528187d1cb72a344e3e67c8821",
+    "evidence/frozen-evaluation/alpha1-seed13/PRE_RUN.json": "ed23a0d4f8a208bd9628445ae64418425778972df36b59f8148ab19f6f3a261f",
+    "evidence/frozen-evaluation/alpha1-seed13/environment-lock.txt": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8",
+    "evidence/frozen-evaluation/alpha1-seed13/fixed.pt": "69d8583225149aa0ef405ac20fb039cb6e4427133df85235f6569fecbe8e0119",
+    "evidence/frozen-evaluation/alpha1-seed13/initial_only.pt": "54991311b6b03cb6f4107fff07b7e1946df9b54b786094023d4f66c627cfdbc4",
+    "evidence/frozen-evaluation/alpha1-seed13/initial_plus_early.pt": "20a67d339fac06454aff3dc0e2dea750b92462367e55d0c2b96c747821cdd6d0",
+    "evidence/frozen-evaluation/alpha1-seed13/manifest.json": "f1d3826a1b0d9d1327a225b3b01f321cc53a92ea56314cc1717c666842633602",
+    "evidence/frozen-evaluation/alpha1-seed13/policies.json": "395650d8adcc43611c20bedfa5cbba224e3be757ced644fba37edf4b4dc490ca",
+    "evidence/frozen-evaluation/alpha16-seed11/PRE_RUN.json": "34cf62bae7d9054a7aef523150726e4be3eea3164fc98c1f62684a6f4da53a29",
+    "evidence/frozen-evaluation/alpha16-seed11/environment-lock.txt": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8",
+    "evidence/frozen-evaluation/alpha16-seed11/fixed.pt": "d588d251d3b6d6e5997e2f3b38f8abdd3834c4bb7f5d337103e12a8e68842f3a",
+    "evidence/frozen-evaluation/alpha16-seed11/initial_only.pt": "50d2fcc66b79c1c0e1e242696abdc175837cf454a42e426d53b3ef0dcca56b25",
+    "evidence/frozen-evaluation/alpha16-seed11/initial_plus_early.pt": "32a7de1a50eff23b84f13f04cc6edcf1e9ed4189087dbb6714df5913c7c505cb",
+    "evidence/frozen-evaluation/alpha16-seed11/manifest.json": "298247f676d7449c73804a21a1b0442a9cb30cd800068c88c3c1f52d1c6a1e76",
+    "evidence/frozen-evaluation/alpha16-seed11/policies.json": "1f8c98cf6ab4169c412897a33f3ef4eecfc7db0b5a23e97867c1348d88078620",
+    "evidence/frozen-evaluation/alpha16-seed12/PRE_RUN.json": "9600dfe9c8255768a305dc4bfb84e3f5812d2ffa4137668e442c54ef3a44cc73",
+    "evidence/frozen-evaluation/alpha16-seed12/environment-lock.txt": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8",
+    "evidence/frozen-evaluation/alpha16-seed12/fixed.pt": "cf0fea90302a2eef6a1f1a4c6e546e186abbda1ee3faddc99455c7fc7ecf9cc8",
+    "evidence/frozen-evaluation/alpha16-seed12/initial_only.pt": "3b156371601baf1f938a81f778f473aff7e83a9b4cf29bf9896e00965dbd4527",
+    "evidence/frozen-evaluation/alpha16-seed12/initial_plus_early.pt": "30633a4e0f850b07583bf2589144ff3a7a399b6086c20e262b25477a559ea1b1",
+    "evidence/frozen-evaluation/alpha16-seed12/manifest.json": "dffe5c2134ad270d27ca1384a08d56954cd74aac2ff88ce5660d63a20209109e",
+    "evidence/frozen-evaluation/alpha16-seed12/policies.json": "3c082b42e3830ac1cfcfdc19bcf0fac88824b8d0a770fb00fb892280084a2429",
+    "evidence/frozen-evaluation/alpha16-seed13/PRE_RUN.json": "163cdfdfe601bfd10125cddeff600f1b9ef5c770abceab5ae3668975a57e1459",
+    "evidence/frozen-evaluation/alpha16-seed13/environment-lock.txt": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8",
+    "evidence/frozen-evaluation/alpha16-seed13/fixed.pt": "8007f111c1841b21d0f1e2837b6a14102c717aef1c7e5e19b47aaa4bb723665e",
+    "evidence/frozen-evaluation/alpha16-seed13/initial_only.pt": "c02b626ad149fe95d2570fc935f4ac8cc4fdd2e78a4e7b1f63011a7c3b06fff5",
+    "evidence/frozen-evaluation/alpha16-seed13/initial_plus_early.pt": "7ced801ec754a33602bdaad81aba98235d7a2ed60e0584417a6a5958199c0f20",
+    "evidence/frozen-evaluation/alpha16-seed13/manifest.json": "ad961e33f439a073243cb55505eae8caf5fa4ef90e45a5464658810b1b1e9945",
+    "evidence/frozen-evaluation/alpha16-seed13/policies.json": "c8829960133247bebccfc4686d702d6be1031d90d40aa7dfdf64da5beeded524",
+    "evidence/frozen-evaluation/evaluation-summary.csv": "4c7c17ef77c98a288f1cc28fff68d129fd756a3832e7d98b2b561f01184d9b5a",
+    "evidence/frozen-evaluation/evaluation-summary.json": "a0b85c14d758d963c3cd7097089d70cfb6d15c672f9dbb6be2d514ce33cff82c",
+    "evidence/frozen-evaluation/inputs/examples/development_pilot.py": "0c82a159ceb04f9e265d97df5833131ff2438f7bb56b6133a62c409b0bf319cc",
+    "evidence/frozen-evaluation/inputs/examples/policy_evaluation.py": "2fce5a85f6d9530b8725854a8a63d774bff276fa153a26ec9113792382fafd6f",
+    "evidence/frozen-evaluation/inputs/research/FINAL_PROTOCOL.md": "134d4197e775b46e93ba8c6a79218542cb609b32b375152b01b207e898fffa35",
+    "evidence/frozen-evaluation/inputs/research/final-freeze.json": "22ab74d94203770a59d2e2a812e67b79ea076755aaf167a4349d5b10a6281839",
+    "evidence/frozen-evaluation/inputs/scripts/pace_policy_evaluation.sbatch": "1b5e03c3efc6d0643eea0b99eeacf32378a60904c8ee8920546f60f66303c4de",
+    "evidence/frozen-evaluation/inputs/src/dynamicsbench/__init__.py": "d3c05a3015aadc3d016217a1d860c1146003db4ceb45167eb8ee3934d7b62eb2",
+    "evidence/frozen-evaluation/inputs/src/dynamicsbench/core.py": "bc650fce6e64787df730ea519708ea2684b81aa3634c32ca45c55764438ac156",
+    "evidence/frozen-evaluation/inputs/tests/test_evaluation_freeze.py": "ea37ea22cefd8e5bb5092d99e6dc52948110141889db14445aec3573b8d2faa1",
+    "evidence/frozen-evaluation/inputs/tests/test_policy_pairing.py": "84ffb52c9e6377af8a433a540822f682927d067d4789725fa7dfcbf2c64c3843",
+    "evidence/frozen-evaluation/quality-cost.pdf": "84434eb57150057b64de52b856cf1e8ba3e18f79a67727ed666f8b5c9aaf3bc8",
+    "evidence/frozen-evaluation/quality-cost.png": "1936b07775fea2f528d5dc05574f57c2c4dbfd75d1c84ed0502dcd9c7fb64d9e",
+    "examples/independent_workload.py": "f17d22d3ea7dd2085bafeb83a8214f42098c796366d7ef6d45ba01eaf73e595c",
+    "examples/product_failure_probe.py": "23ae0545085f361f3c837da9c4d80ecd526bed89a4e926e06fd7f64d1ca1ed81",
+    "examples/product_independent.py": "37b3b3d03fd02a869bc54efe65786b1caead7354eed40831d753df73a8d5f28a",
+    "examples/product_linear.py": "56de70444943f574129c40b0f88bf7c882eccaa5c721bc1063c925c941afe8c0",
+    "external/torchdiffeq/LICENSE": "df970ff07a0460f29115f2feddcceb8253f5840a8b35df857884354e3d47753c",
+    "external/torchdiffeq/ode_demo.py": "36cc0ebfcf56afb7a291142c03a19b8f0bd3d437f914f3f98657e048aa8a60e4",
+    "external/torchdiffeq/odefunc.py": "c0aa58c1e29be04f7e58e47f6e2f85ac32f8fe7661b073b2d91d46b8521b72f1",
+    "external/torchdiffeq/provenance.json": "1830e26df6c67df51043910ef9e5b46b04b6416161364e31eb3b2ddae5db3c82",
+    "external/torchdiffeq/requirements-p1.txt": "e8eca1cf142a6df7294d15a861704df7f08467b1fb7e38141290bf8288ff0a99",
+    "pyproject.toml": "e47e7cbc993a4f8de0df902cd71db0ff0bb1cf3f46b2eed299f61f4ac6c1cb0d",
+    "research-replay/examples/compiled_validation.py": "07da596c9dee86806bef8f033851a89c409e1ad73fa9ec7cb631592f31174142",
+    "research-replay/examples/development_pilot.py": "0c82a159ceb04f9e265d97df5833131ff2438f7bb56b6133a62c409b0bf319cc",
+    "research-replay/examples/gpu_validation.py": "df0f709993796f321a3bd4aacd67384228e8525e20ba5bf1ca72bff63eebc59e",
+    "research-replay/examples/policy_evaluation.py": "2fce5a85f6d9530b8725854a8a63d774bff276fa153a26ec9113792382fafd6f",
+    "research-replay/examples/summarize_evaluation.py": "dde7b48093958874693917b6dd487645a2167840c260fdcabc515a9574080470",
+    "research-replay/research/FINAL_PROTOCOL.md": "134d4197e775b46e93ba8c6a79218542cb609b32b375152b01b207e898fffa35",
+    "research-replay/research/final-freeze.json": "22ab74d94203770a59d2e2a812e67b79ea076755aaf167a4349d5b10a6281839",
+    "research-replay/runtime/sitecustomize.py": "ffbefdd0d93bd0ba547cae73d63074e139b9f5daddd29ead936f7403cea05d2f",
+    "research-replay/scripts/pace_policy_evaluation.sbatch": "1b5e03c3efc6d0643eea0b99eeacf32378a60904c8ee8920546f60f66303c4de",
+    "research-replay/src/dynamicsbench/__init__.py": "d3c05a3015aadc3d016217a1d860c1146003db4ceb45167eb8ee3934d7b62eb2",
+    "research-replay/src/dynamicsbench/core.py": "bc650fce6e64787df730ea519708ea2684b81aa3634c32ca45c55764438ac156",
+    "research-replay/src/dynamicsbench/execution.py": "31ac55c303528d63ab977d14273e6a32edce592044993cf093f33b142c22fda9",
+    "research-replay/tests/test_evaluation_freeze.py": "ea37ea22cefd8e5bb5092d99e6dc52948110141889db14445aec3573b8d2faa1",
+    "research-replay/tests/test_policy_pairing.py": "84ffb52c9e6377af8a433a540822f682927d067d4789725fa7dfcbf2c64c3843",
+    "scripts/verify_candidate.py": "003095d62fae461ec80fece6f41f8454cfe9baa3172fda24e99f29b99d375324",
+    "src/dynamicsbench/__init__.py": "eff66bf8630648f1002e8ebec228ea23f3c6f3a1ca6f8462c52a52bbe70def62",
+    "src/dynamicsbench/cli.py": "76ceaf683a6397762eeb86bae9f502ca6919b85a5cc47293b5408a16e495fddd",
+    "src/dynamicsbench/core.py": "3f4331896e7805d937be72a97c6cb4d68ba2c4a61fe66b095020ea7ea3010192",
+    "src/dynamicsbench/evaluate.py": "e7d5f586ecfca4ce814b3cb1eb3d3ffa5e4ee44c1752c99d098713446eaf5947",
+    "src/dynamicsbench/execution.py": "31ac55c303528d63ab977d14273e6a32edce592044993cf093f33b142c22fda9",
+    "src/dynamicsbench/workflow.py": "c999aa5ad6c6a378363eaf14b22541e67e3a4b9f736b0aa7567917b19fda6f06",
+    "tests/test_core.py": "2b1f02d8345db0c106252e495d89bb6a807f415308ec1c46f519257f3c2ee88b",
+    "tests/test_cuda.py": "52123557c84ce27063946ae103a4ca787b90d42602933032978e15849d2a0584",
+    "tests/test_independent_workload.py": "e53802dd82abad10059661157ddfc3270d0bf21a2b548c3d7a596c9242c88400",
+    "tests/test_portable_sources.py": "85c1a0885cbac5bcf81510320e3c307fdf18b0d8472a04eaa669c58bed169b3d",
+    "tests/test_workflow.py": "467eb19a89e192ba8d53551ddbf94e8e9c754379649c80c7af6d87622972e782"
+  },
+  "canonical_files": {
+    ".gitattributes": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "5834cac5cc679d64e77e96231df8d788695ede0d0a3775c662ccc1a2046ab2ce"
+    },
+    ".github/workflows/test.yml": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "1f62561ca6c3544802dd26ca89b3db077759f9ac170f136fe826d9f2de2f5df9"
+    },
+    ".gitignore": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "d6a392ea95e4cc8013c565b6ea7421f1fb2639f5ceb4b2e03fa1af9af9e6dc3b"
+    },
+    "CONTRIBUTING.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "91a2859eb81621ae2eaf2f5c3a99c682b570eb1e69235e740a5edf65ddfcef6c"
+    },
+    "EVIDENCE.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "2c974058cb94c85b1e5b0e9fd3a9b923250c0dac29e525a876923d432963feea"
+    },
+    "EVIDENCE_INDEX.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "4d974cdfd83d5dc9dff2ede549fbfd2a78332fc80bbb7bc6c72ee73311c67466"
+    },
+    "LICENSE": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "d787b96738b8ba026952afb54dcf9045f7097271efe8b275ffa873fe69d146d6"
+    },
+    "QUICKSTART.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "85b4706d13e851bdd4efcc89f800f4378af2c6b41ef199dd0d36ad08ea0bcca8"
+    },
+    "README.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "d2db880c49732da48603b7e19b43e19f4170d0ee4c5dce6b926bab4f32571693"
+    },
+    "RELEASE_NOTES.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "9d2110560de3429e95e9f472765f06b0278a3dce19443c0d9a84f2efedacd30c"
+    },
+    "REPRODUCING.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "b0c441ced537fcdfde9869218445b21662d431695a36d0fc3ad387436ca481f2"
+    },
+    "TECHNICAL_REPORT.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "590d578ebeecc751b98c5863bb6489565b64f4ee89389056e23473ce7811183e"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "ebb812abfeac1fcce933410821aad138ccf0acc43be2a932deed25024adfa4a5"
+    },
+    "docs/COMPATIBILITY.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7752a105454232b01efd9e06c20c68b06bf53d7ac151fb552dfc9a617e36aa2e"
+    },
+    "docs/PRODUCT_GUIDE.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "f4e5898c616240bb8cdbeabf3772f7fad2b06988df1827493f313b2303822571"
+    },
+    "docs/RELEASE_VERIFICATION.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "760d7acc51603e18cb94b8e4ad74fd23ee290060fab82861eb61328a5e72e3cb"
+    },
+    "evidence/USABILITY_RECORD.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "120e60f4b81296b640c9f6b539fbca055af98f66a9ee580c902e70c78a32bac3"
+    },
+    "evidence/compiled/compiled-reports.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "83767944cef57e77198540ffe8e46945e6a119b74659aecfc60673d782655c44"
+    },
+    "evidence/compiled/environment-lock.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8"
+    },
+    "evidence/compiled/tests.log": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "03cb57e1a23adcb5aec5866bc2a791eaab4238502b21f74c57f44c445e22fb31"
+    },
+    "evidence/frozen-evaluation/alpha1-seed11/PRE_RUN.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7ddb03d0b5c4a19326343793c9648a6f4cf6d70991f978927fb64f31d608a1ec"
+    },
+    "evidence/frozen-evaluation/alpha1-seed11/environment-lock.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8"
+    },
+    "evidence/frozen-evaluation/alpha1-seed11/manifest.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "335ae89d6071eb8b83a29637ce9ae56954e6ad3e0b637731b82f99ebbd2ca81a"
+    },
+    "evidence/frozen-evaluation/alpha1-seed11/policies.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "27ecff9951610dcad667f3901f4b2c3d460ff37ec9edcbc79dd857d5ea173dbf"
+    },
+    "evidence/frozen-evaluation/alpha1-seed12/PRE_RUN.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "ce1b3130be4dbdd6c64f959dbbc2545becf7af050965793da49f348e88cd6fce"
+    },
+    "evidence/frozen-evaluation/alpha1-seed12/environment-lock.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8"
+    },
+    "evidence/frozen-evaluation/alpha1-seed12/manifest.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "92e016436940d60c72e34e0914da7edcd4f434770eab5e5c8707a84def58d609"
+    },
+    "evidence/frozen-evaluation/alpha1-seed12/policies.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "17cefa8ac8bd2614a207cd4088d1a56d29a686528187d1cb72a344e3e67c8821"
+    },
+    "evidence/frozen-evaluation/alpha1-seed13/PRE_RUN.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "ed23a0d4f8a208bd9628445ae64418425778972df36b59f8148ab19f6f3a261f"
+    },
+    "evidence/frozen-evaluation/alpha1-seed13/environment-lock.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8"
+    },
+    "evidence/frozen-evaluation/alpha1-seed13/manifest.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "f1d3826a1b0d9d1327a225b3b01f321cc53a92ea56314cc1717c666842633602"
+    },
+    "evidence/frozen-evaluation/alpha1-seed13/policies.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "395650d8adcc43611c20bedfa5cbba224e3be757ced644fba37edf4b4dc490ca"
+    },
+    "evidence/frozen-evaluation/alpha16-seed11/PRE_RUN.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "34cf62bae7d9054a7aef523150726e4be3eea3164fc98c1f62684a6f4da53a29"
+    },
+    "evidence/frozen-evaluation/alpha16-seed11/environment-lock.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8"
+    },
+    "evidence/frozen-evaluation/alpha16-seed11/manifest.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "298247f676d7449c73804a21a1b0442a9cb30cd800068c88c3c1f52d1c6a1e76"
+    },
+    "evidence/frozen-evaluation/alpha16-seed11/policies.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "1f8c98cf6ab4169c412897a33f3ef4eecfc7db0b5a23e97867c1348d88078620"
+    },
+    "evidence/frozen-evaluation/alpha16-seed12/PRE_RUN.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "9600dfe9c8255768a305dc4bfb84e3f5812d2ffa4137668e442c54ef3a44cc73"
+    },
+    "evidence/frozen-evaluation/alpha16-seed12/environment-lock.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8"
+    },
+    "evidence/frozen-evaluation/alpha16-seed12/manifest.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "dffe5c2134ad270d27ca1384a08d56954cd74aac2ff88ce5660d63a20209109e"
+    },
+    "evidence/frozen-evaluation/alpha16-seed12/policies.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "3c082b42e3830ac1cfcfdc19bcf0fac88824b8d0a770fb00fb892280084a2429"
+    },
+    "evidence/frozen-evaluation/alpha16-seed13/PRE_RUN.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "163cdfdfe601bfd10125cddeff600f1b9ef5c770abceab5ae3668975a57e1459"
+    },
+    "evidence/frozen-evaluation/alpha16-seed13/environment-lock.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "7d06481f353325c511e5220e929f474f6a7978f2f6170726a4e8ce7f0baa87b8"
+    },
+    "evidence/frozen-evaluation/alpha16-seed13/manifest.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "ad961e33f439a073243cb55505eae8caf5fa4ef90e45a5464658810b1b1e9945"
+    },
+    "evidence/frozen-evaluation/alpha16-seed13/policies.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "c8829960133247bebccfc4686d702d6be1031d90d40aa7dfdf64da5beeded524"
+    },
+    "evidence/frozen-evaluation/evaluation-summary.csv": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "add07c1d2debef58585c8fcfae6a929600df2e4f43654456dc56122ea16f11e7"
+    },
+    "evidence/frozen-evaluation/evaluation-summary.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "a0b85c14d758d963c3cd7097089d70cfb6d15c672f9dbb6be2d514ce33cff82c"
+    },
+    "evidence/frozen-evaluation/inputs/examples/development_pilot.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "0c82a159ceb04f9e265d97df5833131ff2438f7bb56b6133a62c409b0bf319cc"
+    },
+    "evidence/frozen-evaluation/inputs/examples/policy_evaluation.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "2fce5a85f6d9530b8725854a8a63d774bff276fa153a26ec9113792382fafd6f"
+    },
+    "evidence/frozen-evaluation/inputs/research/FINAL_PROTOCOL.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "134d4197e775b46e93ba8c6a79218542cb609b32b375152b01b207e898fffa35"
+    },
+    "evidence/frozen-evaluation/inputs/research/final-freeze.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "22ab74d94203770a59d2e2a812e67b79ea076755aaf167a4349d5b10a6281839"
+    },
+    "evidence/frozen-evaluation/inputs/scripts/pace_policy_evaluation.sbatch": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "1b5e03c3efc6d0643eea0b99eeacf32378a60904c8ee8920546f60f66303c4de"
+    },
+    "evidence/frozen-evaluation/inputs/src/dynamicsbench/__init__.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "d3c05a3015aadc3d016217a1d860c1146003db4ceb45167eb8ee3934d7b62eb2"
+    },
+    "evidence/frozen-evaluation/inputs/src/dynamicsbench/core.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "bc650fce6e64787df730ea519708ea2684b81aa3634c32ca45c55764438ac156"
+    },
+    "evidence/frozen-evaluation/inputs/tests/test_evaluation_freeze.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "ea37ea22cefd8e5bb5092d99e6dc52948110141889db14445aec3573b8d2faa1"
+    },
+    "evidence/frozen-evaluation/inputs/tests/test_policy_pairing.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "84ffb52c9e6377af8a433a540822f682927d067d4789725fa7dfcbf2c64c3843"
+    },
+    "examples/independent_workload.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "f17d22d3ea7dd2085bafeb83a8214f42098c796366d7ef6d45ba01eaf73e595c"
+    },
+    "examples/product_failure_probe.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "23ae0545085f361f3c837da9c4d80ecd526bed89a4e926e06fd7f64d1ca1ed81"
+    },
+    "examples/product_independent.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "37b3b3d03fd02a869bc54efe65786b1caead7354eed40831d753df73a8d5f28a"
+    },
+    "examples/product_linear.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "56de70444943f574129c40b0f88bf7c882eccaa5c721bc1063c925c941afe8c0"
+    },
+    "external/torchdiffeq/LICENSE": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "df970ff07a0460f29115f2feddcceb8253f5840a8b35df857884354e3d47753c"
+    },
+    "external/torchdiffeq/ode_demo.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "36cc0ebfcf56afb7a291142c03a19b8f0bd3d437f914f3f98657e048aa8a60e4"
+    },
+    "external/torchdiffeq/odefunc.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "c0aa58c1e29be04f7e58e47f6e2f85ac32f8fe7661b073b2d91d46b8521b72f1"
+    },
+    "external/torchdiffeq/provenance.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "1830e26df6c67df51043910ef9e5b46b04b6416161364e31eb3b2ddae5db3c82"
+    },
+    "external/torchdiffeq/requirements-p1.txt": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "e8eca1cf142a6df7294d15a861704df7f08467b1fb7e38141290bf8288ff0a99"
+    },
+    "pyproject.toml": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "e47e7cbc993a4f8de0df902cd71db0ff0bb1cf3f46b2eed299f61f4ac6c1cb0d"
+    },
+    "research-replay/examples/compiled_validation.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "07da596c9dee86806bef8f033851a89c409e1ad73fa9ec7cb631592f31174142"
+    },
+    "research-replay/examples/development_pilot.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "0c82a159ceb04f9e265d97df5833131ff2438f7bb56b6133a62c409b0bf319cc"
+    },
+    "research-replay/examples/gpu_validation.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "df0f709993796f321a3bd4aacd67384228e8525e20ba5bf1ca72bff63eebc59e"
+    },
+    "research-replay/examples/policy_evaluation.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "2fce5a85f6d9530b8725854a8a63d774bff276fa153a26ec9113792382fafd6f"
+    },
+    "research-replay/examples/summarize_evaluation.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "dde7b48093958874693917b6dd487645a2167840c260fdcabc515a9574080470"
+    },
+    "research-replay/research/FINAL_PROTOCOL.md": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "134d4197e775b46e93ba8c6a79218542cb609b32b375152b01b207e898fffa35"
+    },
+    "research-replay/research/final-freeze.json": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "22ab74d94203770a59d2e2a812e67b79ea076755aaf167a4349d5b10a6281839"
+    },
+    "research-replay/runtime/sitecustomize.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "ffbefdd0d93bd0ba547cae73d63074e139b9f5daddd29ead936f7403cea05d2f"
+    },
+    "research-replay/scripts/pace_policy_evaluation.sbatch": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "1b5e03c3efc6d0643eea0b99eeacf32378a60904c8ee8920546f60f66303c4de"
+    },
+    "research-replay/src/dynamicsbench/__init__.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "d3c05a3015aadc3d016217a1d860c1146003db4ceb45167eb8ee3934d7b62eb2"
+    },
+    "research-replay/src/dynamicsbench/core.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "bc650fce6e64787df730ea519708ea2684b81aa3634c32ca45c55764438ac156"
+    },
+    "research-replay/src/dynamicsbench/execution.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "31ac55c303528d63ab977d14273e6a32edce592044993cf093f33b142c22fda9"
+    },
+    "research-replay/tests/test_evaluation_freeze.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "ea37ea22cefd8e5bb5092d99e6dc52948110141889db14445aec3573b8d2faa1"
+    },
+    "research-replay/tests/test_policy_pairing.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "84ffb52c9e6377af8a433a540822f682927d067d4789725fa7dfcbf2c64c3843"
+    },
+    "scripts/verify_candidate.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "003095d62fae461ec80fece6f41f8454cfe9baa3172fda24e99f29b99d375324"
+    },
+    "src/dynamicsbench/__init__.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "eff66bf8630648f1002e8ebec228ea23f3c6f3a1ca6f8462c52a52bbe70def62"
+    },
+    "src/dynamicsbench/cli.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "76ceaf683a6397762eeb86bae9f502ca6919b85a5cc47293b5408a16e495fddd"
+    },
+    "src/dynamicsbench/core.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "3f4331896e7805d937be72a97c6cb4d68ba2c4a61fe66b095020ea7ea3010192"
+    },
+    "src/dynamicsbench/evaluate.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "e7d5f586ecfca4ce814b3cb1eb3d3ffa5e4ee44c1752c99d098713446eaf5947"
+    },
+    "src/dynamicsbench/execution.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "31ac55c303528d63ab977d14273e6a32edce592044993cf093f33b142c22fda9"
+    },
+    "src/dynamicsbench/workflow.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "c999aa5ad6c6a378363eaf14b22541e67e3a4b9f736b0aa7567917b19fda6f06"
+    },
+    "tests/test_core.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "2b1f02d8345db0c106252e495d89bb6a807f415308ec1c46f519257f3c2ee88b"
+    },
+    "tests/test_cuda.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "52123557c84ce27063946ae103a4ca787b90d42602933032978e15849d2a0584"
+    },
+    "tests/test_independent_workload.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "e53802dd82abad10059661157ddfc3270d0bf21a2b548c3d7a596c9242c88400"
+    },
+    "tests/test_portable_sources.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "85c1a0885cbac5bcf81510320e3c307fdf18b0d8472a04eaa669c58bed169b3d"
+    },
+    "tests/test_workflow.py": {
+      "canonicalization": "utf8-crlf-to-lf",
+      "canonical_sha256": "467eb19a89e192ba8d53551ddbf94e8e9c754379649c80c7af6d87622972e782"
+    }
+  }
+}

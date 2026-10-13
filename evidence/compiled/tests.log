@@ -1,0 +1,25 @@
+test_heldout_does_not_change_selection (test_core.CoreChecks) ... ok
+test_invalid_inputs (test_core.CoreChecks) ... ok
+test_invalid_reference (test_core.CoreChecks) ... ok
+test_no_passing_candidate (test_core.CoreChecks) ... ok
+test_objective_exception_becomes_failure (test_core.CoreChecks) ... ok
+test_parameter_groups_independent (test_core.CoreChecks) ... ok
+test_snapshot_independence (test_core.CoreChecks) ... ok
+test_vector_analytical_gradient (test_core.CoreChecks) ... ok
+test_vector_direction_and_threshold (test_core.CoreChecks) ... ok
+test_zero_norm_and_nonfinite (test_core.CoreChecks) ... ok
+test_eager_and_compiled_states_and_gradients (test_cuda.CudaChecks) ... ok
+test_mixed_device_rejected (test_cuda.CudaChecks) ... ok
+test_analytical_gradient_matches_finite_difference (test_linear.NumericalChecks) ... ok
+test_autodiff_matches_discrete_finite_difference (test_linear.NumericalChecks) ... ok
+test_invalid_config_rejected (test_linear.NumericalChecks) ... ok
+test_nonfinite_result_fails_and_is_json_safe (test_linear.NumericalChecks) ... ok
+test_refinement_improves_both_errors (test_linear.NumericalChecks) ... ok
+test_rk4_state_and_gradient_match_reference (test_linear.NumericalChecks) ... ok
+test_unstable_candidate_and_no_recommendation (test_linear.NumericalChecks) ... ok
+test_zero_gradient_has_no_cosine (test_linear.NumericalChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 23.588s
+
+OK

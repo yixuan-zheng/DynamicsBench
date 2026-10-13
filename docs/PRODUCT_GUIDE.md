@@ -31,4 +31,4 @@ CLI exit0: selected; exit3: no_recommendation or heldout_failed, with complete a
 
 Repeat runs should reproduce callback inputs, snapshots and numerical outcomes within stated tolerances; execution times are not expected to be identical. The focused tests compare API/CLI cases and checks rather than requiring identical timing ranks.
 
-Compiled benchmarking is outside this tester packet. Historical compilation evidence remains in the author archive; the product CLI evaluates eager solver configurations only.
+The product CLI evaluates eager solver configurations only. Separate analytical compilation evidence is in evidence/compiled and TECHNICAL_REPORT.md.

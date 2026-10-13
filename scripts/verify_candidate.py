@@ -2,7 +2,7 @@
 import hashlib,json
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
-m=json.loads((root/'CANDIDATE.json').read_text());equivalent=[]
+m=json.loads((root/'RELEASE_MANIFEST.json').read_text());equivalent=[]
 for relative,expected in m['files'].items():
     path=root/relative
     if not path.is_file():raise SystemExit(f'Missing candidate file: {relative}')

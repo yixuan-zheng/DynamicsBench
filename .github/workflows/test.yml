@@ -1,0 +1,17 @@
+name: CPU package checks
+on: [push, pull_request]
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install ".[independent]"
+      - run: python scripts/verify_candidate.py
+      - run: python -m unittest discover -s tests
+      - run: dynamicsbench --workload examples/product_linear.py --output results/ci-linear

@@ -1,0 +1,25 @@
+{
+  "development_only": false,
+  "reserved_seed_evaluation": true,
+  "freeze_sha256": "22ab74d94203770a59d2e2a812e67b79ea076755aaf167a4349d5b10a6281839",
+  "alpha": 16,
+  "seed": 13,
+  "torch": "2.1.0a0+32f93b1",
+  "gpu": "Tesla V100-PCIE-16GB",
+  "dtype": "float64",
+  "model": "known_kinematics_learned_acceleration",
+  "common_window_updates": 100,
+  "full_horizon_updates": 200,
+  "dataset_seeds": {
+    "train": 1013,
+    "calibration": 2013,
+    "heldout_test": 3013
+  },
+  "paired_parameters_and_optimizer": true,
+  "hashes": {
+    "examples/policy_evaluation.py": "2fce5a85f6d9530b8725854a8a63d774bff276fa153a26ec9113792382fafd6f",
+    "examples/development_pilot.py": "0c82a159ceb04f9e265d97df5833131ff2438f7bb56b6133a62c409b0bf319cc",
+    "src/dynamicsbench/core.py": "bc650fce6e64787df730ea519708ea2684b81aa3634c32ca45c55764438ac156",
+    "research/FINAL_PROTOCOL.md": "134d4197e775b46e93ba8c6a79218542cb609b32b375152b01b207e898fffa35"
+  }
+}
